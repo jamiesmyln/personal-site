@@ -1,0 +1,114 @@
+$animation-speed: 30s;
+$text-color: #2e2e2e;
+$text-color-hover: #1995ad;
+
+html, body {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: $text-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-bg {
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(124deg, #f1f1f2, #bcbabe, #a1d6e2, #1995ad, #f1f1f2);
+  background-size: 1800% 1800%;
+  -webkit-animation: rainbow $animation-speed ease infinite;
+  -z-animation: rainbow $animation-speed ease infinite;
+  -o-animation: rainbow $animation-speed ease infinite;
+  animation: rainbow $animation-speed ease infinite;
+
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+}
+
+.card-container {
+  display: flex;
+  height: 100%;
+}
+
+.card {
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  max-width: 500px;
+  min-width: 300px;
+  text-align: center;
+  margin: auto;
+  padding: 2em;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px 0px rgba(72, 72, 72, 0.8);
+
+  &__icon {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+    background: url('me.jpg') no-repeat center;
+    background-size: contain;
+  }
+
+  .titles {
+    text-transform: uppercase;
+    list-style: none;
+    padding: 1em 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .title {
+    padding: 0 10px;
+    display: inline;
+  }
+
+  .about {
+    border-top: 1px solid #d6d6d6;
+    padding: 1em 0;
+  }
+
+  &__footer {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    a {
+      font-size: 1.5em;
+      color: $text-color;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        font-size: 2em;
+        color: $text-color-hover;
+        transition: all .3s ease;
+      }
+    }
+  }
+}
