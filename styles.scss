@@ -1,114 +1,70 @@
-$animation-speed: 30s;
+$serif: 'Abril Fatface', cursive;
+$sans-serif: 'Open Sans', sans-serif;
 $text-color: #2e2e2e;
 $text-color-hover: #1995ad;
+$green: #bed3c3;
+$navy: #212e53;
+$peach: #ebaca2;
+$rose: #ce6a6b;
 
 html, body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: $sans-serif;
   color: $text-color;
+  background-color: $navy;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.page-bg {
-  height: 100%;
-  width: 100%;
-  left:0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background: linear-gradient(124deg, #f1f1f2, #bcbabe, #a1d6e2, #1995ad, #f1f1f2);
-  background-size: 1800% 1800%;
-  -webkit-animation: rainbow $animation-speed ease infinite;
-  -z-animation: rainbow $animation-speed ease infinite;
-  -o-animation: rainbow $animation-speed ease infinite;
-  animation: rainbow $animation-speed ease infinite;
+.page-body {
+  display: grid;
+  grid-template-columns: min-content auto;
+}
 
-  @-webkit-keyframes rainbow {
-      0%{background-position:0% 82%}
-      50%{background-position:100% 19%}
-      100%{background-position:0% 82%}
+.about {
+  background-color: $green;
+  padding: 40px;
+
+  > * {
+    max-width: 800px;
   }
-  @-moz-keyframes rainbow {
-      0%{background-position:0% 82%}
-      50%{background-position:100% 19%}
-      100%{background-position:0% 82%}
-  }
-  @-o-keyframes rainbow {
-      0%{background-position:0% 82%}
-      50%{background-position:100% 19%}
-      100%{background-position:0% 82%}
-  }
-  @keyframes rainbow {
-      0%{background-position:0% 82%}
-      50%{background-position:100% 19%}
-      100%{background-position:0% 82%}
+
+  [class*="fa-"] {
+    color: $rose;
   }
 }
 
-.card-container {
-  display: flex;
-  height: 100%;
+.name {
+  font-family: $serif;
+  font-size: 6em;
+  font-weight: 400;
+  line-height: 1;
+  color: $peach;
+  background-color: $navy;
+  writing-mode: vertical-rl;
+  padding: 40px;
+
+  &__first {
+    line-height: .5;
+  }
 }
 
-.card {
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  position: relative;
-  max-width: 500px;
-  min-width: 300px;
-  text-align: center;
-  margin: auto;
-  padding: 2em;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px 0px rgba(72, 72, 72, 0.8);
-
-  &__icon {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin: auto;
-    background: url('me.jpg') no-repeat center;
-    background-size: contain;
+@supports(background-clip: text) {
+  .name {
+    background: url(flowers.jpg) top center no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: #ebaca25e;
   }
+}
 
-  .titles {
-    text-transform: uppercase;
-    list-style: none;
-    padding: 1em 0;
-    margin: 0;
-    display: inline-block;
-  }
+.header {
+  font-family: $serif;
+  font-size: 2em;
+  color: $navy;
+}
 
-  .title {
-    padding: 0 10px;
-    display: inline;
-  }
-
-  .about {
-    border-top: 1px solid #d6d6d6;
-    padding: 1em 0;
-  }
-
-  &__footer {
-    height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-
-    a {
-      font-size: 1.5em;
-      color: $text-color;
-      cursor: pointer;
-      transition: all .3s ease;
-
-      &:hover {
-        font-size: 2em;
-        color: $text-color-hover;
-        transition: all .3s ease;
-      }
-    }
-  }
+.reset-header {
+  font-weight: 400;
+  margin: 0;
 }
