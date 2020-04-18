@@ -1,2 +1,78 @@
-html,body{font-family:"Open Sans",sans-serif;color:#2e2e2e;background-color:#212e53;height:100%;margin:0;padding:0}.page-body{display:grid;grid-template-columns:-webkit-min-content auto;grid-template-columns:min-content auto}.about{background-color:#bed3c3;padding:40px}.about>*{max-width:800px}.about [class*="fa-"]{color:#ce6a6b}.name{font-family:"Abril Fatface",cursive;font-size:6em;font-weight:400;line-height:1;color:#ebaca2;background-color:#212e53;-webkit-writing-mode:vertical-rl;-ms-writing-mode:tb-rl;writing-mode:vertical-rl;padding:40px}.name__first{line-height:.5}@supports ((-webkit-background-clip: text) or (background-clip: text)){.name{background:url(flowers.jpg) top center no-repeat;background-size:cover;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:#ebaca25e}}.header{font-family:"Abril Fatface",cursive;font-size:2em;color:#212e53}.reset-header{font-weight:400;margin:0}
+html, body {
+  font-family: "Source Code Pro", monospace;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content auto;
+      grid-template-columns: -webkit-min-content auto;
+      grid-template-columns: min-content auto;
+}
+
+.about {
+  background-color: #020115b8;
+  padding: 40px;
+}
+
+.about > * {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about [class*="fa-"] {
+  color: #fff;
+}
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.name {
+  font-family: "Oswald", sans-serif;
+  font-size: 6em;
+  font-weight: 400;
+  line-height: 1;
+  color: black;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  padding: 40px;
+}
+
+.name__first {
+  line-height: .5;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .name {
+    background: url(ink.mp4) top center no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: black;
+  }
+}
+
+.header {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  color: #fff;
+}
+
+.reset-header {
+  font-weight: 400;
+  margin: 0;
+}
 /*# sourceMappingURL=styles.css.map */
