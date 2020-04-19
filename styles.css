@@ -1,21 +1,28 @@
 html, body {
   font-family: "Source Code Pro", monospace;
-  color: #fff;
+  color: black;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+a {
+  color: black;
+}
+
+a:hover, a:focus, a:active, a:visited {
+  text-decoration: underline;
+}
+
 .page-body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: min-content auto;
-      grid-template-columns: -webkit-min-content auto;
-      grid-template-columns: min-content auto;
+  -ms-grid-columns: 300px auto;
+      grid-template-columns: 300px auto;
 }
 
 .about {
-  background-color: #020115b8;
+  background-color: transparent;
   padding: 40px;
 }
 
@@ -25,7 +32,17 @@ html, body {
 }
 
 .about [class*="fa-"] {
-  color: #fff;
+  color: black;
+}
+
+.about__logo {
+  background: url(quilljoy-logo.svg) no-repeat center;
+  height: 100%;
+  width: 300px;
+  position: relative;
+  display: block;
+  background-size: contain;
+  margin: auto;
 }
 
 video {
@@ -44,7 +61,8 @@ video {
   font-size: 6em;
   font-weight: 400;
   line-height: 1;
-  color: black;
+  color: white;
+  background-color: black;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -53,26 +71,35 @@ video {
 
 .name__first {
   line-height: .5;
+  margin-bottom: 35px;
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   .name {
-    background: url(ink.mp4) top center no-repeat;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 .header {
   font-family: "Oswald", sans-serif;
   font-size: 2em;
-  color: #fff;
+  color: black;
 }
 
 .reset-header {
   font-weight: 400;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

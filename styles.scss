@@ -1,8 +1,8 @@
 $headings: 'Oswald', sans-serif;
 $sans-serif: 'Source Code Pro', monospace;
-$text-color: #fff;
+$text-color: black;
 $text-color-hover: #1995ad;
-$body-color: #020115b8;
+$body-color: transparent;
 
 html, body {
   font-family: $sans-serif;
@@ -12,9 +12,17 @@ html, body {
   padding: 0;
 }
 
+a {
+  color: $text-color;
+
+  &:hover, &:focus, &:active, &:visited {
+    text-decoration: underline;
+  }
+}
+
 .page-body {
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: 300px auto;
 }
 
 .about {
@@ -28,6 +36,16 @@ html, body {
 
   [class*="fa-"] {
     color: $text-color;
+  }
+
+  &__logo {
+    background: url(quilljoy-logo.svg) no-repeat center;
+    height: 100%;
+    width: 300px;
+    position: relative;
+    display: block;
+    background-size: contain;
+    margin: auto;
   }
 }
 
@@ -46,22 +64,23 @@ video {
   font-size: 6em;
   font-weight: 400;
   line-height: 1;
-  color: black;
+  color: white;
+  background-color: black;
   writing-mode: vertical-rl;
   padding: 40px;
 
   &__first {
     line-height: .5;
+    margin-bottom: 35px;
   }
 }
 
 @supports(background-clip: text) or (-webkit-background-clip: text) {
   .name {
-    background: url(ink.mp4) top center no-repeat;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -74,4 +93,7 @@ video {
 .reset-header {
   font-weight: 400;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
