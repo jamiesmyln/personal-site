@@ -39,12 +39,15 @@ a {
   }
 
   &__logo {
-    background: url(quilljoy-logo.svg) no-repeat center;
-    height: 300px;
-    width: 300px;
-    position: relative;
-    background-size: contain;
-    margin: auto;
+
+    &::before {
+      content: '';
+      background: url('logo.png') no-repeat center;
+      display: block;
+      height: 300px;
+      width: 300px;
+      margin: auto;
+    }
   }
 }
 

@@ -15,8 +15,10 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 .page-body {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px auto;
+  -ms-grid-columns: 300px auto;
+      grid-template-columns: 300px auto;
 }
 
 .about {
@@ -33,17 +35,18 @@ a:hover, a:focus, a:active, a:visited {
   color: black;
 }
 
-.about__logo {
-  background: url(quilljoy-logo.svg) no-repeat center;
+.about__logo::before {
+  content: '';
+  background: url("logo.png") no-repeat center;
+  display: block;
   height: 300px;
   width: 300px;
-  position: relative;
-  background-size: contain;
   margin: auto;
 }
 
 video {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -59,7 +62,9 @@ video {
   line-height: 1;
   color: white;
   background-color: black;
-  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   padding: 40px;
 }
 
@@ -77,8 +82,12 @@ video {
 .reset-header {
   font-weight: 400;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fade-in {
@@ -98,15 +107,6 @@ video {
   }
 }
 
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -115,21 +115,4 @@ video {
     opacity: 1;
   }
 }
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*# sourceMappingURL=styles.css.map */
